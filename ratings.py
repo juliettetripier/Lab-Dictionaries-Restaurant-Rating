@@ -24,7 +24,19 @@ def restaurant_dictionary(filename):
 sorted_ratings = restaurant_dictionary("scores.txt")
 
 new_name = input("What is the restaurant name? > ").title()
-new_score = input("What is the new score? > ")
+
+while True:
+    new_score = input("What is the new score? > ")
+
+    if new_score.isnumeric():
+        new_score = int(new_score)
+        if new_score >= 1 and new_score <= 5:
+            break
+        else:
+            print("Please rate between 1 and 5!")
+    else:
+        print("Please enter a number 1-5! (ex. 4)")
+
 
 sorted_ratings[new_name] = new_score
 
