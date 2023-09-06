@@ -46,6 +46,9 @@ sorted_tuples = sorted(restaurant_tuples)
 
 print(sorted_tuples)
 
+for restaurant in sorted(sorted_ratings): # if you plug a dict into sorted, you get back an iterator with the sorted keys
+    print(restaurant, sorted_ratings[restaurant])
+
 # print(sorted_ratings.items())
 
 # print(sorted_ratings)
